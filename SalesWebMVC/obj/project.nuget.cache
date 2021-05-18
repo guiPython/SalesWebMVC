@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5rrT6s+qQ1XFusbWRxA4qE9KTDKUhl6Orf3hl2r6XKPwqWagBLKoPP7P+2RLljRXsvY6JlnsGlZWMAm91jR8Xw==",
+  "dgSpecHash": "h5FXFOEUOMzokE/tIGIcsSPgXymvp4PfDgNxpPl8OpWmwlBxAEeTQ3iPfAQDRHoKY1B6M3k4dY13wqp4keDdLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\guiPy\\Documents\\SalesWebMVC\\SalesWebMVC\\SalesWebMVC\\SalesWebMVC.csproj",
   "expectedPackageFiles": [
@@ -53,7 +53,9 @@
     "C:\\Users\\guiPy\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.2\\microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512",
     "C:\\Users\\guiPy\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\guiPy\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\guiPy\\.nuget\\packages\\mysqlconnector\\1.3.7\\mysqlconnector.1.3.7.nupkg.sha512",
     "C:\\Users\\guiPy\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\guiPy\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\5.0.0\\pomelo.entityframeworkcore.mysql.5.0.0.nupkg.sha512",
     "C:\\Users\\guiPy\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\guiPy\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\guiPy\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
