@@ -17,5 +17,11 @@ namespace SalesWebMVC.Services
         }
 
         public List<Seller> FindAll() => _dbContext.Seller.ToList();
+
+        public void Insert(Seller obj)
+        {
+            _dbContext.Add(obj);
+            _dbContext.SaveChanges();
+        }
     }
 }
