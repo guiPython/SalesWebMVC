@@ -1,6 +1,5 @@
 ﻿using SalesWebMVC.Data;
 using SalesWebMVC.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,32 +17,32 @@ namespace SalesWebMVC.Services
             _dbContext = dbContext;
         }
 
-        public List<Seller> FindAll() => _dbContext.Seller.ToList();
+        public async Task<List<Seller>> FindAllAsync() => await _dbContext.Seller.ToListAsync();
 
-        public void Insert(Seller obj)
+        public async Task InsertAsync(Seller obj)
         {
             _dbContext.Add(obj);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Seller FindById(int id) => _dbContext.Seller.Include(obj => obj.Department).SingleOrDefault(s => s.Id == id);
+        public async Task<Seller> FindByIdAsync(int id) => await _dbContext.Seller.Include(obj => obj.Department).SingleOrDefaultAsync(s => s.Id == id);
 
-        public void Remove(int id)
+        public async Task RemoveAsync(int id)
         {
-            var obj = _dbContext.Seller.Find(id);
+            var obj = await _dbContext.Seller.FindAsync(id);
             _dbContext.Seller.Remove(obj);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
 
-        public void Update(Seller seller)
+        public async Task UpdateAsync(Seller seller)
         {
-            if (!_dbContext.Seller.Any(s => s.Id == seller.Id)) throw new NotFoundException("Id not Found");
+            if (!(await _dbContext.Seller.AnyAsync(s => s.Id == seller.Id))) throw new NotFoundException("Id not Found");
             try
             {
                 _dbContext.Update(seller);
-                _dbContext.SaveChanges();
+                await _dbContext.SaveChangesAsync();
             }
-            catch(DbUpdateConcurrencyException e)
+            catch (DbUpdateConcurrencyException e)
             {
                 throw new DbConcurrencyException(e.Message);
             }
