@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace SalesWebMVC.Services
 {
@@ -24,7 +25,7 @@ namespace SalesWebMVC.Services
             _dbContext.SaveChanges();
         }
 
-        public Seller FindById(int id) => _dbContext.Seller.SingleOrDefault(s => s.Id == id);
+        public Seller FindById(int id) => _dbContext.Seller.Include(obj => obj.Department).SingleOrDefault(s => s.Id == id);
 
         public void Remove(int id)
         {
